@@ -1,0 +1,156 @@
+/* 
+ styles.css 
+ Student Name: NOOR JANAJREH
+ Student Id: 12400696
+*/
+
+:root {
+    --bg: #faf7f2;
+    --text: hwb(0 12% 88%);
+    --muted: #6b6b6b;
+    --brand: #216869;
+    --brand-2: #49a078;
+    --card: #ffffff;
+    --border: #e9e3db;
+}
+
+body {
+    margin: 0;
+    font-family: "Rubik", sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: var(--card);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo { font-size: 22px; font-weight: 600; color: var(--brand); }
+.nav-links { display: flex; gap: 20px; list-style: none; }
+.nav-links a { font-weight: 500; color: var(--muted); }
+.nav-links a:hover { color: var(--brand-2); }
+
+.hero {
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: url("https://i.postimg.cc/DwKt8Vhp/bg.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-tag {
+    background: var(--brand);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.hero h1 { font-size: 42px; margin: 15px 0; }
+
+.button {
+    background: var(--brand);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.button:hover { background: var(--brand-2); }
+
+.about-grid, .menu-grid, .hours-grid, .find-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    padding: 50px 100px;
+}
+
+.card, .menu-card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    flex: 1;
+}
+.card a { color: var(--brand-2); }
+
+.menu-card {
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.tags span { background: var(--border); padding: 6px 12px; border-radius: 20px; margin-right: 6px; font-size: 14px; }
+.menu-card .price { color: var(--brand); float: right; }
+.card .hours { color: var(--text); float: right; }
+
+.small { color: var(--muted); font-size: 14px; }
+
+#edit { margin-left: 100px; }
+
+.section-title { text-align: left; font-size: 28px; margin-bottom: 40px;  margin-left: 100px; }
+
+.map-box img { border-radius: 10px; }
+
+.site-footer { padding: 30px; color: white; text-align: center; }
+.site-footer a { color: var(--brand-2); }
+
+@media (max-width: 768px) {
+    .navbar { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 10px; 
+    }
+    .hero { 
+        height: 60vh; 
+    }
+    .about-grid, .menu-grid, .hours-grid, .find-grid { 
+        flex-direction: column; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar { 
+        flex-direction: row; 
+        text-align: left; 
+        gap: 20px; 
+    }
+    .hero { 
+        height: 70vh; 
+    }
+    .about-grid, .menu-grid, .hours-grid, .find-grid { 
+        flex-direction: row; 
+    }
+}
